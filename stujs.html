@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Student Js</title>
+</head>
+<body>
+<script>
+function student(sId,sName){
+this.sId=sId;
+this.sName=sName;
+this.totalMarks=totalMarks;
+function totalMarks(SE,RDBMS,MT){
+this.SE=SE;
+this.RDBMS=RDBMS;
+this.MT=MT;
+return SE+RDBMS+MT;
+}
+}
+var s=new student(18107,"Shashi kumar S");
+var sum=s.totalMarks(34,31,30);
+document.write(s.sId+" "+s.sName+" "+sum);
+/* using for each accessing array of objects */
+var dictionary = {
+		"data":[
+				{"id":"18107","name":"Shashi Kumar S"},
+				{"id":"18121","name":"Jayaram"},
+				{"id":"18100","name":"Javed A K"}
+			   ]
+			   };
+		var data= dictionary.data;
+		
+		for(var i in data)
+		{
+		 var id=data[i].id;
+		 var name=data[i].name;
+		 document.write("</br>"+id);
+		 document.write(" "+name);
+		}
+// date object //
+var date= new Date();
+var day=date.getDay();
+var month=date.getMonth()+1;
+var year=date.getFullYear();
+document.write("</br>"+day+"/"+month+"/"+year);
+// get time using date object//
+var time=new Date();
+var h=time.getHours();
+var m=time.getMinutes();
+var sec=time.getSeconds();
+var ms=time.getMilliseconds();
+if(h<12){
+document.write("</br>"+h+":"+m+":"+sec+":"+ms+" AM");
+}
+else {
+h=h%12;
+document.write("</br>"+h+":"+m+":"+sec+":"+ms+" PM");
+}
+</script>
+</body>
+</html>
